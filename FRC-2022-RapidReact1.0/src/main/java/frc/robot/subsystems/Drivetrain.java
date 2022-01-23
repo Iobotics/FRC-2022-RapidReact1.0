@@ -23,7 +23,7 @@ We are going to use NEO motors and have a leader (master) and follower (slave) o
     private CANSparkMax rightMaster;
     private CANSparkMax rightSlave;
 
-    private DifferentialDrive drive;
+    public DifferentialDrive drive;
 
 /* DifferentialDrive is when the robot is controlled by wheels on each side. 
 Steering is controlled by motor speed and direction */

@@ -26,5 +26,10 @@ public final class Constants {
         public static final int kRightMaster = 2;
         public static final int kRightSlave = 3;
     }
+    
+    public static final class OIConstants{
+        public static final int kJoystick1 = 0;
+        public static final int kJoystick2 = 1;
+    }
 
 }
