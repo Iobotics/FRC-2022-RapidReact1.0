@@ -8,13 +8,14 @@ import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
+import edu.wpi.first.wpilibj2.command.RunCommand;
 import frc.robot.Constants.OIConstants;
 import frc.robot.subsystems.Drivetrain;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
  * "declarative" paradigm, very little robot logic should actually be handled in the {@link Robot}
- * periodic methods (other than the scheduler calls). Instead, the structure of the robot (including
+ * periodic methods (other than the scheduler calls). Instead, the structure of the robot (includin)
  * subsystems, commands, and button mappings) should be declared here.
  */
 public class RobotContainer {
@@ -28,8 +29,10 @@ public class RobotContainer {
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
+    drivetrain.setDefaultCommand(new RunCommand(
+      () -> drivetrain.drive.tankDrive(-joystick1.getY(), joystick2.getY()), drivetrain));
 
-    drivetrain.drive.tankDrive(joystick1.getY(), joystick2.getY());
+
     // Configure the button bindings
     configureButtonBindings();
   }
