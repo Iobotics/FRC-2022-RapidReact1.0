@@ -25,6 +25,7 @@ public final class Constants {
         public static final int kLeftSlave = 1;
         public static final int kRightMaster = 2;
         public static final int kRightSlave = 4;
+        public static final int kSpinner = 0;
     }
     
     public static final class OIConstants{
